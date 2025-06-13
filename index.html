@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Selenium Practice Trainer Site</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Selenium Trainer Playground</h1>
+    <p class="context">This is OUTSIDE all IFRAMES (Main Window)</p>
+  </header>
+
+  <main>
+    <!-- Dropdowns -->
+    <section class="card">
+      <h2>Dropdowns</h2>
+      <label for="static">Static Dropdown</label>
+      <select id="static">
+        <option>-- Select Fruit --</option>
+        <option value="apple">Apple</option>
+        <option value="mango">Mango</option>
+        <option value="banana">Banana</option>
+      </select>
+
+      <h4>Custom Multi-select Dropdown</h4>
+      <div class="custom-dropdown">
+        <div class="dropdown-header" onclick="toggleCustomDropdown()">
+          <span id="selectedTags">Select options...</span>
+          <span class="caret">▼</span>
+        </div>
+        <div id="customDropdown" class="dropdown-list hidden">
+          <label><input type="checkbox" value="Red" onchange="updateTags()"> Red</label>
+          <label><input type="checkbox" value="Green" onchange="updateTags()"> Green</label>
+          <label><input type="checkbox" value="Blue" onchange="updateTags()"> Blue</label>
+        </div>
+      </div>
+    </section>
+
+    <!-- Alerts -->
+    <section class="card">
+      <h2>JavaScript Alerts</h2>
+      <button onclick="triggerAlert()">Simple Alert</button>
+      <button onclick="triggerConfirm()">Confirmation Alert</button>
+      <button onclick="triggerPrompt()">Prompt Alert</button>
+    </section>
+
+    <!-- Windows -->
+    <section class="card">
+      <h2>Window & Tab Handling</h2>
+      <button onclick="openNewTab()">Open New Tab</button>
+      <button onclick="openNewWindow()">Open New Window</button>
+    </section>
+
+    <!-- Iframes -->
+    <section class="card">
+      <h2>Iframe Handling</h2>
+      <!-- Proper placement -->
+      <p class="context-note">This is OUTSIDE all IFRAMES (Main Window)</p>
+      
+      <iframe
+        srcdoc="<body style='background:#e0f7fa'><h3>You are inside OUTER IFRAME</h3></body>"
+        id="iframeOne"
+      ></iframe>
+
+      <iframe
+        srcdoc="<body style='background:#ffecb3'><h3>You are inside IFRAME by ID/Name</h3></body>"
+        id="iframeTwo"
+      ></iframe>
+
+      <iframe
+        srcdoc="<iframe srcdoc='<body style=&quot;background:#c8e6c9&quot;><h3>You are inside NESTED IFRAME</h3></body>'></iframe>"
+        id="iframeThree"
+      ></iframe>
+    </section>
+
+    <!-- Mouse Actions -->
+    <section class="card">
+      <h2>Mouse Actions</h2>
+      <div id="hoverArea" class="mouse-box">Hover Over Me</div>
+      <div id="dblClickArea" class="mouse-box">Double Click Me</div>
+      <div id="contextMenu" class="mouse-box">Right Click Me</div>
+
+      <div class="dragdrop-container">
+        <div id="drag" class="drag" draggable="true">Drag Me</div>
+        <div id="drop" class="drop">Drop Here</div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
