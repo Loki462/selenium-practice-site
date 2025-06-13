@@ -16,7 +16,7 @@ function openNewTab() {
   window.open("https://example.com", "_blank");
 }
 function openNewWindow() {
-  window.open("https://example.com", "_blank", "width=600,height=400");
+  window.open("https://example.com", "_blank", "width=1980,height=1000,left=100,top=100");
 }
 
 // Custom Dropdown
