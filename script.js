@@ -8,7 +8,9 @@ function triggerConfirm() {
 }
 function triggerPrompt() {
   let input = prompt("Please enter your name:");
-  console.log("Prompt input:", input);
+  if (input !== null) {
+    document.getElementById("promptResult").innerText = `You entered: ${input}`;
+  }
 }
 
 // Windows & Tabs
