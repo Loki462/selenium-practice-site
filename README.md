@@ -14,7 +14,7 @@ This Selenium Practice Trainer Site is designed to help learners practice variou
 
 ## Setup Instructions
 1. **Download the Files**:
-   - `selenium-practice-enhanced.html`
+   - `selenium-practice.html`
    - `script.js`
    - `styles.css`
 
