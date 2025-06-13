@@ -49,8 +49,5 @@ This Selenium Practice Trainer Site is designed to help learners practice variou
 - **Right Click**: Right-click the box to see the visual change.
 - **Drag & Drop**: Drag the item and drop it in the designated area to see the visual change.
 
-### Feedback Area
-The feedback area displays confirmation messages for user actions, enhancing the user experience and providing visual feedback for automation practice.
-
 ## License
 This project is licensed under the MIT License.
